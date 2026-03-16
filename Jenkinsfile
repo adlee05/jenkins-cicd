@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'node --version'
+                echo "the agent's env is the jenkins image itself, the pipeline runs on the built in node inside the container"
             }
         }
     }
