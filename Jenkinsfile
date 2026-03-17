@@ -2,12 +2,6 @@ pipeline {
   agent any
 
   stages {
-    stage('clone repository') {
-      steps {
-        git 'https://github.com/adlee05/jenkins-cicd'
-      }
-    }
-
     stage('build image') {
       steps {
         sh 'docker build -t 2023bcs0217/jenkins-cicd:latest .'
